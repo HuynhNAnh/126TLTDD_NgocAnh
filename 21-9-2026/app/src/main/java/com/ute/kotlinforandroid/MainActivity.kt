@@ -1,16 +1,40 @@
 package com.ute.kotlinforandroid
 
 import android.content.Intent
+<<<<<<< HEAD
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+=======
+import android.os.Bundle
+import android.view.View
+>>>>>>> bfe9972 (add function with & apply)
 import androidx.appcompat.app.AppCompatActivity
 import com.ute.kotlinforandroid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    // ── 1. Gom nhóm thao tác hiển thị với 'with(binding)' ─────
+    private fun displayStudent(name: String, gpa: Double, email: String) {
+// Bên trong with(binding), mọi View thuộc binding đều là 'this'
+        with(binding) {
+            tvName.text = name
+            tvGpa.text = "Điểm tích lũy: $gpa"
+            tvEmail.text = email
+            btnUpdate.isEnabled = true
+            progressBar.visibility = View.GONE
+        }
+    }
+    // ── 2. Cấu hình Intent hoặc View mới với 'apply' ──────────
+    private fun openDetailActivity(studentId: String) {
+        val detailIntent = Intent(this, DetailActivity::class.java).apply {
+            putExtra("KEY_STUDENT_ID", studentId)
+            putExtra("KEY_TIMESTAMP", System.currentTimeMillis())
+            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
+        startActivity(detailIntent)
+    }
     private lateinit var binding: ActivityMainBinding
 
     // Helper hiển thị Toast nhanh
