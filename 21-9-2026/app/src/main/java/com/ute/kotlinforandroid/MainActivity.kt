@@ -8,15 +8,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ute.kotlinforandroid.databinding.ActivityMainBinding
-
+import com.ute.kotlinforandroid.utils.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    // Helper hiển thị Toast nhanh
-    private fun toast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
 
     // ── 1. Gom nhóm thao tác hiển thị với 'with(binding)' ─────
     private fun displayStudent(name: String, gpa: Double, email: String) {
@@ -26,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             tvGpa.text = "Điểm tích lũy: $gpa"
             tvEmail.text = email
             btnUpdate.isEnabled = true
-            progressBar.visibility = View.GONE
+            progressBar.gone() // Sử dụng Extension function đã viết
         }
     }
 
@@ -76,5 +72,8 @@ class MainActivity : AppCompatActivity() {
         displayStudent(name = "Huỳnh Ngọc Anh", gpa = 3.8, email = "anhsieu572@gmail.com")
         processAvatarUri(null) // Test với null để gán icon mặc định
         calculateAndAudit(3.8)
+        val currentGpa = 3.85
+        binding.tvRanking.text = "Xếp loại: ${currentGpa.toAcademicRanking()}"
+        toast("Chào mừng bạn! Điểm: ${currentGpa.toAcademicRanking()}")
     }
 }
