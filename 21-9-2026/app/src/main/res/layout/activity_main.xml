@@ -5,15 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-<<<<<<< HEAD
     android:padding="20dp"
-=======
-    android:padding="24dp"
->>>>>>> c66f0b6 (add view name, gpa, email, btn, progressbar)
-=======
-    android:padding="20dp"
->>>>>>> fa5aaff (add imageView và textview)
     tools:context=".MainActivity">
 
     <TextView
@@ -23,12 +15,6 @@
         android:text="Chào mừng bạn đến với ViewBinding!"
         android:textSize="20sp"
         android:textStyle="bold"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        app:layout_constraintBottom_toTopOf="@+id/tvName"
-=======
->>>>>>> fa5aaff (add imageView và textview)
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,86 +89,6 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
->>>>>>> c66f0b6 (add view name, gpa, email, btn, progressbar)
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
-
-    <ImageView
-        android:id="@+id/imgAvatar"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="Avatar"
-        android:src="@drawable/ic_default_avatar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
-
-    <TextView
-        android:id="@+id/tvAvatarStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Chưa có ảnh đại diện"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
-
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Tên sinh viên"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAvatarStatus" />
-
-    <TextView
-        android:id="@+id/tvGpa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Điểm tích lũy: 0.0"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="email@example.com"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGpa" />
-
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Cập nhật thông tin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-=======
->>>>>>> fa5aaff (add imageView và textview)
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
